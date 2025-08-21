@@ -1,0 +1,227 @@
+.listing-page {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.filters {
+  background: #e5e4e4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 90px;
+  align-self: start;
+  height: fit-content;
+}
+
+.filters h4 {
+  margin: 15px 0 8px;
+  font-size: 16px;
+}
+
+.filter-check {
+  display: block;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.range-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.range-inputs input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.listings h2 {
+  margin-bottom: 20px;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.property-card {
+  background: #e5e4e4b0;
+  overflow: hidden;
+   border: 1px solid black;
+   border-radius: 5px;
+  box-shadow: 0 4px 10px rgb(59, 59, 59);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.property-info {
+  padding: 12px;
+}
+
+.property-info h5 {
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+
+.property-info p {
+  margin: 2px 0;
+  font-size: 16px;
+}
+
+.property-info .price {
+  color: blue;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.property-info .details {
+  color: #555;
+  font-size: 14px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) {
+  .listing-page {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .filters {
+    position: relative; /* no sticky on small screens */
+    top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .property-grid {
+    grid-template-columns: 1fr; /* only 1 card per row */
+  }
+
+  .filters input,
+  .range-inputs input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .property-info h5 {
+    font-size: 14px;
+  }
+}
+
+
+.image-wrapper img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+
+.image-wrapper {
+  position: relative;
+  overflow: visible; /* important to show buttons outside */
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: blue;
+  font-size: 24px;
+  width: 36px;
+  height: 36px; /* fixed height */
+  line-height: 36px; /* centers the arrow vertically */
+  text-align: center; /* centers horizontally */
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 100;
+  user-select: none;
+  padding: 0; /* no extra padding needed */
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.prev-btn, .next-btn {
+  background: rgba(255, 255, 255, 0.747) !important;
+}
+.sort-options {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-options select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #8ee64e;
+}
+.pagination {
+  display: flex;
+  justify-content: center; /* center the pagination */
+  margin: 20px 0;
+  gap: 8px; /* space between buttons */
+}
+
+.page-btn {
+  background-color: #007bff; /* blue color */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.page-btn:hover {
+  background-color: #0056b3; /* darker blue on hover */
+}
+
+.page-btn.active {
+  background-color: #ff5722; /* active page color, you can choose any */
+  color: white;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.property-card-link{
+  text-decoration: none ;
+}

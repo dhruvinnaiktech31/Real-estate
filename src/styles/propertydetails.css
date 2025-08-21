@@ -1,0 +1,263 @@
+.property-detail-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  align-items: flex-start;
+  flex-wrap: wrap; /* helps on smaller screens */
+}
+
+/* Left Main Section */
+.property-left {
+  flex: 3;
+  min-width: 300px;
+}
+
+/* Right Sidebar */
+.property-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}
+
+/* Buttons */
+.back-btn {
+  background-color: #8ee64e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #218838;
+}
+
+/* Property Images */
+.property-image-marquee {
+  margin-bottom: 20px;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.property-image-marquee::-webkit-scrollbar {
+  height: 6px;
+}
+
+.property-image-marquee::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  margin-right: 15px;
+}
+
+.marquee-item img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.marquee-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Property Details */
+.property-address {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.property-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.property-rent-area {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.property-rooms-area {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.property-short-details p {
+  margin-bottom: 20px;
+}
+
+/* Property About Grid */
+.property-about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background: #252525d3;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.property-about-grid div {
+  padding: 10px;
+  border-radius: 8px;
+  background: #f7f7f7;
+}
+
+/* Map Section */
+.property-map {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Sidebar Cards */
+.rent-info, .landlord-info {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.rent-sidebar {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.landlord-info h4 {
+  margin-bottom: 10px;
+}
+
+.credibility, .report span {
+  cursor: pointer;
+}
+
+.credibility {
+  color: #007bff;
+}
+
+.report span {
+  color: red;
+}
+
+/* ====== Responsive CSS ====== */
+@media (max-width: 1200px) {
+  .property-detail-container {
+    gap: 20px;
+  }
+
+  .property-title {
+    font-size: 26px;
+  }
+
+  .property-about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .property-right {
+    position: relative;
+    top: auto;
+    min-width: 100%;
+  }
+}
+
+@media (max-width:700px) {
+  .property-detail-container {
+    flex-direction: column;
+    margin: 20px;
+  }
+  .property-left{
+        max-width: 500px;
+  }
+  .property-title {
+    font-size: 24px;
+  }
+
+  .property-rent-area {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .property-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rent-sidebar {
+    font-size: 20px;
+  }
+
+  .marquee-item img {
+    width: 180px;
+    height: 120px;
+  }
+}
+@media (max-width: 568px) {
+  .property-left{
+        max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .property-title {
+    font-size: 20px;
+  }
+
+  .property-rent-area {
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .property-about-grid {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .marquee-item img {
+    width: 140px;
+    height: 100px;
+  }
+}

@@ -1,0 +1,78 @@
+.latest-marquee {
+  overflow: hidden;
+  background: #cac9c9a0;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 30px;
+}
+
+.marquee-card {
+  flex: 0 0 auto;
+  width: 220px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  animation: none;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease; /* smooth scaling */
+}
+
+.marquee-card img:hover {
+  transform: scale(1.05); /* slightly bigger */
+}
+
+.marquee-card img {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.marquee-card {
+  position: relative;
+  width: 250px;
+  margin: 0 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.marquee-card:hover {
+  transform: translateY(-6px);
+}
+
+.marquee-info {
+  background: #fff;
+  padding: 8px;
+  text-align: center;
+}
+
+.marquee-hover {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.marquee-card:hover .marquee-hover {
+  bottom: 0;
+}
