@@ -206,7 +206,7 @@
     margin: 20px;
   }
   .property-left{
-        max-width: 500px;
+        width: 100px;
   }
   .property-title {
     font-size: 24px;

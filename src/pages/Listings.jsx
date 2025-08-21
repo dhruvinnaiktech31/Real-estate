@@ -153,8 +153,7 @@ const knownLocations = ["Bangalore", "Pune", "Surat", "Hyderabad", "Delhi"];
                 <div className="property-card">
                   <div className="image-wrapper">
                     <img src={images[currentIndex]} alt={p.title} />
-                    <button className="prev-btn" onClick={(e) => { e.preventDefault(); handlePrev(p.id, images.length); }}>‹</button>
-                    <button className="next-btn" onClick={(e) => { e.preventDefault(); handleNext(p.id, images.length); }}>›</button>
+                    
                   </div>
                   <div className="property-info">
                     <h5>{p.title}</h5>
